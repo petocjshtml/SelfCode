@@ -1,0 +1,67 @@
+body {
+  padding: 20px;
+}
+.editor {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.file-tree {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.file-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.item-row {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+.item-row:hover {
+  background-color: #f0faff;
+}
+.item-row.active {
+  background-color: #cce5ff;
+}
+.item-row i {
+  margin-right: 5px;
+}
+.rename-icon,
+.delete-icon {
+  display: none;
+  cursor: pointer;
+}
+.item-row:hover .rename-icon,
+.item-row:hover .delete-icon {
+  display: inline;
+}
+.action-container {
+  margin-left: auto;
+  display: flex;
+  gap: 5px;
+}
+ul.file-list {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+}
+.inline-input input {
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.inline-input input:focus {
+  box-shadow: none;
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}
